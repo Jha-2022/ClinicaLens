@@ -86,6 +86,32 @@ def create_medassist_agent(audience: str) -> Agent:
         raise ValueError(f"Unsupported audience context: '{audience}'")
 ```
 
+## Working
+```
+  +-----------------------------+
+                      |   Raw Clinical Input Data   |
+                      |  (Notes, Labs, Radiology)   |
+                      +--------------+--------------+
+                                     |
+                                     v
+                       +-------------+-------------+
+                       |   ClinicaLens Router      |
+                       +------+---------------+-----+
+                              |               |
+             IF DOCTOR        |               |        IF PATIENT
+       +----------------------+               +----------------------+
+       |                                                             |
+       v                                                             v
++------+----------------------+                       +--------------+--------------+
+| medassist_doctor_agent      |                       | medassist_patient_agent     |
++-----------------------------+                       +-----------------------------+
+| * Maximize Velocity         |                       | * Translate Jargon to Plain |
+| * Formal SOAP Architecture  |                       | * 3 Pillars: Findings,      |
+| * Retain Advanced Jargon    |                       |   Advice, Lexicon Explained |
+| * High-Priority Alert Flags |                       | * Mandatory Legal AI Guard  |
++-----------------------------+                       +-----------------------------+
+
+```
 
 ## ⚙️ Setup & Installation
 ### 1. Clone the Repository
