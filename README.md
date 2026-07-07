@@ -13,4 +13,4 @@ and radiology reports—into two tailored pathways:
 * For Patients: Instantiates an empathetic health educator persona that translates complex jargon into plain everyday language, organizing findings into clear consumer-friendly pillars (Key Findings, Actionable Advice, and Terminology Explained).
 
 ## Screenshots
-<img src="assets/image1.png" alt="App Preview" width="500">
+<img src="frontend/src/assets/image1.png" alt="App Preview" width="500">
