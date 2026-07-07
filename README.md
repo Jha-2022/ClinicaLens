@@ -88,7 +88,7 @@ def create_medassist_agent(audience: str) -> Agent:
 
 ## Working
 ```
-  +-----------------------------+
+                      +-----------------------------+
                       |   Raw Clinical Input Data   |
                       |  (Notes, Labs, Radiology)   |
                       +--------------+--------------+
