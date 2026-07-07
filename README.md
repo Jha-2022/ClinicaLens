@@ -4,6 +4,7 @@ ClinicaLens is an AI-powered medical text summarization platform built to elimin
 Powered by Gemini 2.5 Flash and the Google ADK (Agent Development Kit), the system acts as an intelligent semantic router that 
 dynamically adapts its architecture based on the user persona.
 
+<img src="frontend/src/assets/showimage1.png" alt="App Preview 1" width="75%">
 
 Instead of generating a one-size-fits-all summary, ClinicaLens splits raw clinical data—such as unstructured notes, lab panels,
 and radiology reports—into two tailored pathways:
