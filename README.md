@@ -14,3 +14,4 @@ and radiology reports—into two tailored pathways:
 
 ## Screenshots
 <img src="frontend/src/assets/image1.png" alt="App Preview" width="500">
+<img src="frontend/src/assets/image2.png" alt="App Preview" width="500">
