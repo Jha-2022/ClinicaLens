@@ -126,13 +126,24 @@ Create a .env file inside the my_agent/ directory and supply your Gemini API key
 GEMINI_API_KEY="your_api_key_here"
 ```
 
-### 3. Install Dependencies
+### 3. Come to Backend directory and Install Dependencies 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Execute the Router
+### 4. Execute the Router/Backend in one terinal
 ```Bash
 python main.py
 ```
+
+### 5. Come to Frontend directory and Install Dependencies
+```Bash
+npm install 
+```
+### 6. In new terminal run the Frontend 
+```Bash
+npm run dev 
+```
+
+
 
