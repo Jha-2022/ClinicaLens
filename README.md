@@ -103,7 +103,7 @@ def create_medassist_agent(audience: str) -> Agent:
        |                                                             |
        v                                                             v
 +------+----------------------+                       +--------------+--------------+
-| medassist_doctor_agent      |                       | medassist_patient_agent     |
+| doctor_agent                |                       | patient_agent               |
 +-----------------------------+                       +-----------------------------+
 | * Maximize Velocity         |                       | * Translate Jargon to Plain |
 | * Formal SOAP Architecture  |                       | * 3 Pillars: Findings,      |
