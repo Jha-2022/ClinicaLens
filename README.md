@@ -11,3 +11,6 @@ and radiology reports—into two tailored pathways:
 * For Doctors: Instantiates a clinical scribe persona that strips away conversational filler, formats data into standard SOAP structures, retains precise medical jargon, and highlights critical out-of-range anomalies right at the top.
 
 * For Patients: Instantiates an empathetic health educator persona that translates complex jargon into plain everyday language, organizing findings into clear consumer-friendly pillars (Key Findings, Actionable Advice, and Terminology Explained).
+
+## Screenshots
+<img src="assets/image1.png" alt="App Preview" width="500">
