@@ -145,5 +145,11 @@ npm install
 npm run dev 
 ```
 
+## Suggestions & Feedback
+Feel free to open issues or discussions if you have any feedback, feature suggestions, or want to collaborate!
+
+## 📄 License
+This project is licensed under the License: MIT
+
 
 
