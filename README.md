@@ -18,3 +18,94 @@ and radiology reports—into two tailored pathways:
   <img src="frontend/src/assets/image2.png" alt="App Preview 2" width="49%">
 </div>
 
+## 📂 Project Repository Structure
+The architecture maintains a strict separation of concerns, keeping core logic, prompt assets, and utilities completely modular:
+
+```
+ClinicaLens/
+├── backend/
+│   ├── my_agent/
+│   │   ├── .adk/
+│   │   ├── __pycache__/
+│   │   ├── .env
+│   │   ├── .gitignore
+│   │   ├── __init__.py
+│   │   └── agent.py
+│   ├── .venv/
+│   ├── adk_error.txt
+│   ├── main.py
+│   └── test_run.py
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── node_modules/
+│   ├── .gitignore
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   └── vite.config.js
+├── .git/
+└── README.md
+
+```
+
+## 🚀 Technical Core: Agent Factory
+
+ClinicaLens utilizes a functional Factory Pattern via the Google ADK to instantiate completely isolated runtime environments for each audience profile.
+This guarantees tonal purity and prevents instruction leakage.
+
+
+```python
+from google.adk.agents.llm_agent import Agent
+from prompts.instructions import DOCTOR_SYSTEM_INSTRUCTION, PATIENT_SYSTEM_INSTRUCTION
+
+def create_medassist_agent(audience: str) -> Agent:
+    normalized_audience = audience.strip().lower()
+    
+    if normalized_audience == 'doctor':
+        return Agent(
+            model='gemini-2.5-flash',
+            name='medassist_doctor_agent',
+            description='A clinical summarizer assistant optimized for medical professional charts.',
+            instruction=DOCTOR_SYSTEM_INSTRUCTION,
+        )
+    elif normalized_audience == 'patient':
+        return Agent(
+            model='medassist_patient_agent',
+            name='medassist_patient_agent',
+            description='An empathetic medical summarizer engineered for consumer health literacy.',
+            instruction=PATIENT_SYSTEM_INSTRUCTION,
+        )
+    else:
+        raise ValueError(f"Unsupported audience context: '{audience}'")
+```
+
+
+## ⚙️ Setup & Installation
+### 1. Clone the Repository
+```Bash
+git clone https://github.com/yourusername/clinicalens.git
+cd clinicalens/my_agent
+```
+
+### 2. Configure Environment Variables
+Create a .env file inside the my_agent/ directory and supply your Gemini API key:
+```
+GEMINI_API_KEY="your_api_key_here"
+```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Execute the Router
+```Bash
+python main.py
+```
+
