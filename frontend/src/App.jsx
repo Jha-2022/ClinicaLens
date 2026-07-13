@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FileText, Sparkles, Activity, Loader2, Stethoscope, AlertCircle, CheckCircle, Info, FileSearch, Pill, FilePlus } from 'lucide-react'
 
 function App() {
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
   const [reportText, setReportText] = useState('')
   const [audience, setAudience] = useState('patient') // 'patient' or 'doctor'
   const [isLoading, setIsLoading] = useState(false)
