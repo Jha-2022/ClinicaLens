@@ -49,10 +49,10 @@ function App() {
       }, 1500);
 
       // Call to actual backend endpoint (which would need to be updated to match)
-      const res = await fetch('/api/summarize-report', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text: reportText, audience })
+       const res = await fetch(`${API_BASE_URL}/api/summarize-report`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text: reportText, audience })
       })
 
       fetchCompleted = true;
